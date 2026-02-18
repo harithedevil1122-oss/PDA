@@ -1,0 +1,550 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "13976925-a82b-4e08-bff2-12c21cd12dce",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Welcome\n"
+     ]
+    }
+   ],
+   "source": [
+    "#functions\n",
+    "def fun():\n",
+    "    print(\"Welcome\")\n",
+    "fun()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "732359da-61f0-4438-8da9-67a93f606bbe",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Even\n",
+      "None\n",
+      "Odd\n",
+      "None\n"
+     ]
+    }
+   ],
+   "source": [
+    "# argument passing:\n",
+    "def evenodd(x):\n",
+    "    if x%2==0:\n",
+    "        print(\"Even\")\n",
+    "    else:\n",
+    "        print(\"Odd\")\n",
+    "print (evenodd(16))\n",
+    "print (evenodd(15))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "6c2e567b-e8a6-441b-b18b-d0c877705639",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Practice Daily\n",
+      "Practice Daily\n"
+     ]
+    }
+   ],
+   "source": [
+    "#keyword arguments\n",
+    "def student(fname,lname):\n",
+    "    print(fname,lname)\n",
+    "student(fname=\"Practice\",lname=\"Daily\")\n",
+    "student(lname=\"Daily\",fname=\"Practice\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "82649b5f-ef0a-41a8-a57d-35c692a9ef65",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "x: 30\n",
+      "y: 20\n"
+     ]
+    }
+   ],
+   "source": [
+    "#default arguments\n",
+    "def myFun(x,y=20):\n",
+    "    print(\"x:\",x)\n",
+    "    print(\"y:\",y)\n",
+    "myFun(30)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "cd94d081-c35e-4e43-bd1c-4b60065286bb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "case1\n",
+      "Hi Iam Ram\n",
+      "Hi Iam 25\n",
+      "case2\n",
+      "Hi Iam 25\n",
+      "Hi Iam Ram\n"
+     ]
+    }
+   ],
+   "source": [
+    "#positional arguments\n",
+    "def person(name,age):\n",
+    "    print(\"Hi Iam\",name)\n",
+    "    print(\"Hi Iam\",age)\n",
+    "print (\"case1\")   \n",
+    "person(\"Ram\",25)\n",
+    "print (\"case2\")\n",
+    "person(25,\"Ram\") "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "a9e34192-0a92-42cc-afcb-83fb4355d120",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "I Love India\n"
+     ]
+    }
+   ],
+   "source": [
+    "#function within function\n",
+    "def f1():\n",
+    "    s=\"I Love India\"\n",
+    "    def f2():\n",
+    "        print(s)\n",
+    "    f2()\n",
+    "f1()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "e4b71c6f-9d5b-4d03-b098-26e99c349775",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[10, 20, 30, 40, 50]\n",
+      "[20, 20, 30, 40, 50]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#pass by reference\n",
+    "def myFun(x):\n",
+    "    x[0]=20\n",
+    "lst=[10,20,30,40,50]\n",
+    "print(lst)\n",
+    "myFun(lst)\n",
+    "print(lst)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "35d794d5-2056-45a7-ae7e-3833b7967cc7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# file handling\n",
+    "f = open(\"geek.txt\",\"w\")\n",
+    "f.write(\"File Handling Examples\")\n",
+    "f.close()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "37eefb30-b7c7-4c46-93fb-a0438e7d8946",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<_io.TextIOWrapper name='geek.txt' mode='r' encoding='cp1252'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "#opening file\n",
+    "f=open(\"geek.txt\", \"r\")\n",
+    "print(f)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "6f5482ef-396c-4341-8826-b16bcce171aa",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# closing file\n",
+    "file=open(\"geek.txt\",\"r\")\n",
+    "#perform file opertions\n",
+    "file.close()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "93eed9fa-a89c-4ca8-ac9a-e4a2ec8c4c4c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Filename: geek.txt\n",
+      "Mode: r\n",
+      "Is closed?: False\n",
+      "Is closed? True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#checking file properties\n",
+    "f = open(\"geek.txt\", \"r\")\n",
+    "print(\"Filename:\", f.name)\n",
+    "print(\"Mode:\", f.mode)\n",
+    "print(\"Is closed?:\", f.closed)\n",
+    "\n",
+    "f.close()\n",
+    "print(\"Is closed?\", f.closed)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "e4640413-b2c1-4ca1-a27f-f7da6dbaaf18",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Filename: geek.txt\n",
+      "Mode: r\n",
+      "Is closed?: False\n",
+      "Is closed? True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#checking file properties\n",
+    "f = open(\"geek.txt\", \"r\")\n",
+    "print(\"Filename:\", f.name)\n",
+    "print(\"Mode:\", f.mode)\n",
+    "print(\"Is closed?:\", f.closed)\n",
+    "\n",
+    "f.close()\n",
+    "print(\"Is closed?\", f.closed)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "90e9d827-7307-4d55-973f-4d23cd70c433",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "File Handling Examples\n"
+     ]
+    }
+   ],
+   "source": [
+    "#reading file\n",
+    "f = open(\"geek.txt\", \"r\")\n",
+    "content= f.read()\n",
+    "print(content)\n",
+    "f.close()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "ca2fbae4-c7ee-48ba-beb4-877102d4a63e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "File Handling Examples\n"
+     ]
+    }
+   ],
+   "source": [
+    "# handling exceptions\n",
+    "try:\n",
+    "    file=open(\"geek.txt\", \"r\")\n",
+    "    content = file.read()\n",
+    "    print(content)\n",
+    "finally:\n",
+    "    file.close()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "6c2692ba-eac7-4d33-9f69-0ad6ee2cd874",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Can't be divided by Zero!\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exception Handling\n",
+    "# basic example\n",
+    "n=10\n",
+    "try:\n",
+    "    res=n/0\n",
+    "except ZeroDivisionError:\n",
+    "    print(\"Can't be divided by Zero!\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "cf2b0163-40c4-41bc-bc25-5356363590ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "You can't divided by Zero!\n",
+      "Execution complete.\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "try:\n",
+    "    n=0\n",
+    "    res=100/n\n",
+    "\n",
+    "except ZeroDivisionError:\n",
+    "    print(\"You can't divided by Zero!\") \n",
+    "\n",
+    "except ValueError:\n",
+    "    print(\"Enter a valid number!\")\n",
+    "\n",
+    "else:\n",
+    "    print(\"Result is\", res)\n",
+    "\n",
+    "finally:\n",
+    "    print(\"Execution complete.\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "b786f0c0-daba-43e9-b0a3-302f333b242e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Not Valid!\n"
+     ]
+    }
+   ],
+   "source": [
+    "#catching specific exceptionas\n",
+    "try:\n",
+    "    x=int(\"str\")\n",
+    "    inv=1/x\n",
+    "\n",
+    "except ValueError:\n",
+    "    print(\"Not Valid!\")\n",
+    "\n",
+    "except ZeroDivisionError:\n",
+    "    print(\"Zero has no inverse!\") \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "9515c8ee-c326-46d9-aea3-4f4da7b4d4fb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Error invalid literal for int() with base 10: 'twenty'\n"
+     ]
+    }
+   ],
+   "source": [
+    "# catching multiple exceptions\n",
+    "a=[\"10\", \"twenty\", 30]\n",
+    "\n",
+    "try:\n",
+    "    total=int(a[0]) + int(a[1])\n",
+    "\n",
+    "except (ValueError, TypeError) as e:\n",
+    "    print(\"Error\", e)\n",
+    "\n",
+    "except IndexError:\n",
+    "    print(\"Index out of range\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "b69b15f9-c63e-4935-8e41-c3c007b1d204",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Something went wrong!\n"
+     ]
+    }
+   ],
+   "source": [
+    "# catch all handlers\n",
+    "try:\n",
+    "    res=\"100\"/20\n",
+    "\n",
+    "except ArithmeticError:\n",
+    "    print(\"Arithmetic problem.\")\n",
+    "\n",
+    "except:\n",
+    "    print(\"Something went wrong!\") "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "89b3228e-061e-4d96-a8d0-f99f2dead0be",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Age cannot be negative\n"
+     ]
+    }
+   ],
+   "source": [
+    "# raise an exception\n",
+    "def set(age):\n",
+    "    if age<0:\n",
+    "        raise ValueError(\"Age cannot be negative\")\n",
+    "    print(f\"Age set to {age}\")\n",
+    "\n",
+    "try:\n",
+    "    set(-5)\n",
+    "except ValueError as e:\n",
+    "    print(e)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "e268b588-538e-45cd-a039-96b740899b66",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Age cannot be negative.\n"
+     ]
+    }
+   ],
+   "source": [
+    "#custom exceptions\n",
+    "class AgeError(Exception):\n",
+    "    pass\n",
+    "\n",
+    "def set(age):\n",
+    "    if age<0:\n",
+    "        raise AgeError(\"Age cannot be negative.\")\n",
+    "    print(f\"Age set to {age}\")\n",
+    "try:\n",
+    "    set(-5)\n",
+    "except AgeError as e:\n",
+    "    print(e)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ef34686c-63f4-4e8c-8f2c-27352f2cd3f6",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
